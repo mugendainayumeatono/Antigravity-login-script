@@ -1,0 +1,24 @@
+# Environment variables & keys
+*.env
+*.key
+*.pem
+*.token
+api_key
+base_url
+git_key.txt
+gemini_key.env
+
+# Antigravity CLI local profiles and tokens
+antigravity-oauth-token*
+profiles/
+settings.json
+cache/
+
+# OS / Editor temporary files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
