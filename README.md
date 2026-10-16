@@ -94,8 +94,8 @@ agy-api
    ```bash
    export GEMINI_API_KEY="你的_GEMINI_API_KEY"
    ```
-2. **当前目录或工作区配置文件**：
-   创建 `gemini_key.env` 并写入：
+2. **脚本同级目录配置文件**：
+   在脚本同级目录下放置或软链接 `gemini_key.env`：
    ```bash
    export GEMINI_API_KEY="你的_GEMINI_API_KEY"
    ```

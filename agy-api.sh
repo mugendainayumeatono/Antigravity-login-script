@@ -27,13 +27,11 @@ export AGY_CLI_DISABLE_LATEX=1
 export AGY_CLI_DISABLE_INLINE_MERMAID=1
 stty -ixon 2>/dev/null || true
 
-# 1. Load API Key: check environment, then gemini_key.env, then ~/.gemini/api_key
+# 1. Load API Key: check environment, then $SCRIPT_DIR/gemini_key.env, then ~/.gemini/api_key
 if [ -z "$GEMINI_API_KEY" ] && [ -z "$GOOGLE_API_KEY" ]; then
     SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
     if [ -f "$SCRIPT_DIR/gemini_key.env" ]; then
         source "$SCRIPT_DIR/gemini_key.env"
-    elif [ -f "$HOME/userFile/gemini_key.env" ]; then
-        source "$HOME/userFile/gemini_key.env"
     elif [ -f "$API_KEY_FILE" ]; then
         export GEMINI_API_KEY=$(cat "$API_KEY_FILE" | tr -d '\r\n[:space:]')
     fi
