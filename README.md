@@ -94,12 +94,7 @@ agy-api
    ```bash
    export GEMINI_API_KEY="你的_GEMINI_API_KEY"
    ```
-2. **脚本同级目录配置文件**：
-   在脚本同级目录下放置或软链接 `gemini_key.env`：
-   ```bash
-   export GEMINI_API_KEY="你的_GEMINI_API_KEY"
-   ```
-3. **全局文件保存（免输入）**：
+2. **全局文件保存（免输入）**：
    ```bash
    echo "你的_GEMINI_API_KEY" > ~/.gemini/api_key
    chmod 600 ~/.gemini/api_key
